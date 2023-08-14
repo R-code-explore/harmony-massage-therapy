@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 /**Principal font**/
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+
 
 /**End of fonts**/
 
@@ -13,7 +15,7 @@ body{
 }
 
 .main_font{
-
+    font-family: 'Jacques Francois' , sans-serif;
 }
 
 /**Header**/
@@ -23,14 +25,13 @@ header{
     width: 100%;
     background-color: #259E9E;
     height: 65px;
-    padding-left: 10%;
-    padding-right: 10%;
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: space-between;
 }
 .logo_section{
     display: flex;
+    margin-left: 10%;
 }
 .logo_section img{
     display: block;
@@ -53,23 +54,25 @@ header{
 .phone_menu img:hover{cursor: pointer;}
 
 .menu_container{
-    display: block;
+    display: none;
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 100%;
     top: 0;
     left: 0;
     background: #005a5ac6;
-    padding: 10px;
     transform: translateX(100%);
     transition: .2s ease-in-out;
 }
-.menu_container a{
+.text_menu{
     display: block;
-    margin-top:10px;
+    text-align: center;
+    margin-top:40px;
+    font-size: 24px;
     color: white;
     text-decoration: none;
 }
+.text_menu_1{margin-top:200px;}
 
 /**Pour le menu:
 - Reste a fermer lorsqu'on clique sur l'un des liens ou biens si on clique à un endroit différent de la page**/
