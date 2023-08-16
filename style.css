@@ -12,6 +12,7 @@
 
 body{
     margin: 0;
+    background: white;
 }
 
 .main_font{
@@ -60,9 +61,10 @@ header{
     height: 100%;
     top: 0;
     left: 0;
-    background: #005a5ac6;
+    background: #005a5ad6;
     transform: translateX(100%);
     transition: .2s ease-in-out;
+    z-index: 1;
 }
 .text_menu{
     display: block;
@@ -73,8 +75,103 @@ header{
     text-decoration: none;
 }
 .text_menu_1{margin-top:200px;}
+.close_menu{color: rgb(255, 126, 126);}
 
 /**Pour le menu:
 - Reste a fermer lorsqu'on clique sur l'un des liens ou biens si on clique à un endroit différent de la page**/
 
 /**End of Header**/
+
+/**Banner Settings**/
+.banner_background{
+    display: block;
+    width: 100%;
+}
+.banner_img{
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    transform: translateY(-80%);
+    left: 10%;
+}
+/**End of banner**/
+
+/**Ring menu - main section **/
+.ring_menu{
+    display: flex;
+    width: 105px;
+    justify-content: space-between;
+    margin:auto;
+    margin-top:26px;
+    cursor: pointer;
+}
+/**End of ring menu**/
+
+/**main nav menu**/
+.nav_menu{
+    display: block;
+    margin-top:45px;
+    margin-left:10%;
+}
+
+.nav_menu_options{
+    display: block;
+    background: #B8262E;
+    width: 135px;
+    height: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top:14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 9px 0px rgba(0, 0, 0, 0.25); 
+}
+/**End of main nav menu**/
+
+/**Map info settings**/
+
+.map_info{
+    display: block;
+    width: 80%;
+    max-width: 412px;
+    margin:auto;
+    margin-top:56px;
+    margin-bottom:56px;
+}
+
+.map_info_title{
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.map_info_image{
+    display: block;
+    width: 100%;
+    height: 212px;
+    object-fit: cover;
+    box-shadow: 4px 2px 9px 0px rgba(0, 0, 0, 0.25)
+}
+/**End of map info settings**/
+
+/**Fohow info settings**/
+
+.fohow_info{
+    display: block;
+    width: 80%;
+    max-width: 412px;
+    margin: auto;
+    margin-bottom:56px;
+}
+
+.fohow_info_title{
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.fohow_info_txt{font-size: 10px;}
