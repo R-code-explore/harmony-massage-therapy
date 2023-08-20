@@ -175,3 +175,23 @@ header{
 }
 
 .fohow_info_txt{font-size: 10px;}
+
+/**Fohow Helps settings**/
+
+.fohow_helps{
+    display: block;
+    width: 80%;
+    max-width: 412px;
+    margin: auto;
+    margin-bottom:56px;
+}
+
+.fohow_helps_section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.fohow_helps_section p{
+    width: 40%;
+    font-size: 10px;
+}
