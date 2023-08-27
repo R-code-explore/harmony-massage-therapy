@@ -113,6 +113,57 @@
                 </p>
             </div>
         </div>
+        
+        <div class="advices_sections">
+            <h3 class="main_font advice_section_title">Opinii despre Harmony Massage Therapy</h3>
+            <ul class="gallery advices_section">
+
+                <!--Section à générer en PHP-->
+                <li class="advices_sections">
+                    <div class="user_info">
+                        <img src="./assets/user_img_example.jpg" alt="src">
+                        <p>Oana Test</p>
+                    </div>
+                    <p>Incepant cu primele sedinte,
+                    am inceput deja sa simt o reala
+                    diferenta !</p>
+                    <div class="stars">
+                        <!--Script de vote par étoile ( avec séléction JS dans un   formulaire par exemple ) // à développer-->
+                        <img src="./assets/etoiles_exemple.png" alt="indicatie de   o nota atrbuita de vre un utilizator">
+                    </div>
+                </li>
+        
+                <li class="advices_sections">
+                    <div class="user_info">
+                        <img src="./assets/user_img_example.jpg" alt="src">
+                        <p>Oana Test</p>
+                    </div>
+                    <p>Incepant cu primele sedinte,
+                    am inceput deja sa simt o reala
+                    diferenta !</p>
+                    <div class="stars">
+                        <!--Script de vote par étoile ( avec séléction JS dans un   formulaire par exemple ) // à développer-->
+                        <img src="./assets/etoiles_exemple.png" alt="indicatie de   o nota atrbuita de vre un utilizator">
+                    </div>
+                </li>
+        
+            </ul>
+         </div>
+
+         <div class="advice_form">
+            <h3 class="main_font advice_form_title">Lasati si dumneavoastra un comentariu
+completand formular de mai in jos</h3>
+            <form action="" method="POST" class="form">
+                
+                <input type="text" class="advice_form_input main_font" id="advice_form_input_01" name="name" placeholder="Prenume" required>
+                <label for="advice_form_label_01"></label>
+                <input type="text" class="advice_form_input main_font" id="advice_form_input_01" placeholder="Prenume" required>
+            
+                <textarea name="advice_txt" id="advice_textarea" placeholder="Comentariul sau pararea dumneavoastra" required></textarea>
+            
+            </form>
+         </div>
+    
     </main>
 
     <footer>
