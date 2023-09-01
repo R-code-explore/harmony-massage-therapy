@@ -156,10 +156,10 @@ completand formular de mai in jos</h3>
             <form action="" method="POST" class="form">
                 
                 <input type="text" class="advice_form_input main_font" id="advice_form_input_01" name="name" placeholder="Prenume" required>
-                <label for="advice_form_label_01"></label>
-                <input type="text" class="advice_form_input main_font" id="advice_form_input_01" placeholder="Prenume" required>
             
                 <textarea name="advice_txt" id="advice_textarea" placeholder="Comentariul sau pararea dumneavoastra" required></textarea>
+
+                
             
             </form>
          </div>

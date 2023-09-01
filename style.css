@@ -262,3 +262,41 @@ li > p{
 }
 
 /**End of advices section**/
+
+/**Advices commentary section**/
+
+.advice_form{
+    display: block;
+    width: 80%;
+    max-width: 412px;
+    margin: auto;
+    margin-bottom:56px;
+}
+
+.advice_form_title{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom:18px;
+}
+
+form{
+    display: block;
+    width: 100%;
+}
+form input, form textarea{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 6px;
+    background: #F2F2F2;
+    box-shadow: 2px 4px 9px 0px rgba(0, 0, 0, 0.25);
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin: auto;
+    margin-bottom:15px;
+}
+form textarea{
+    height: 100px;
+    resize:none;
+}
