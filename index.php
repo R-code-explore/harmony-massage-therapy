@@ -159,8 +159,37 @@ completand formular de mai in jos</h3>
             
                 <textarea name="advice_txt" id="advice_textarea" placeholder="Comentariul sau pararea dumneavoastra" required></textarea>
 
-                
-            
+                <label for="option">Alegeti o nota : </label>
+                <select id="option" name="option">
+                    <option value="option1" class="option-container">
+                        <img src="./assets/star_1.jpg" alt="Image 1"         class="option-image">
+                        Nota 1/5
+                    </option>
+                    <option value="option2" class="option-container">
+                        <img src="./assets/star_2.jpg" alt="Image 2"         class="option-image">
+                        Nota 2/5
+                    </option>
+                    <option value="option3" class="option-container">
+                        <img src="./assets/star_3.jpg" alt="Image 3"         class="option-image">
+                        Nota 3/5
+                    </option>
+                    <option value="option4" class="option-container">
+                        <img src="./assets/star_4.jpg" alt="Image 4"         class="option-image">
+                        Nota 4/5
+                    </option>
+                    <option value="option5" class="option-container">
+                        <img src="./assets/star_5.jpg" alt="Image 5"         class="option-image">
+                        Nota 5/5
+                    </option>
+                    <!-- Ajoutez autant d'options que nécessaire -->
+                </select>
+                <br><br>
+                <div class="termens_checkbox">
+                    <input type="checkbox">
+                    <p class=main_font>Am acceptat <a href="">terminii si conditiile</a> site-ului inainte de a confirma formularul</p>
+                </div>
+
+                <button class="submit_form_button main_font" type="submit">Trimite</button>
             </form>
          </div>
     
