@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($row) {
                 $userId = $row['id'];
 
-                // Mettre à jour le mot de passe dans la base de données
+                // PSWD UPDATE
                 $updateSql = "UPDATE users SET pswd = :hashedPassword WHERE id = :userId";
                 $updateStmt = $db->prepare($updateSql);
                 $updateStmt->bindParam(':hashedPassword', $hashedPassword, PDO::PARAM_STR);

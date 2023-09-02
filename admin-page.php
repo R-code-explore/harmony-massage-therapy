@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+    header("Location: admin.php");
+    exit;
+}
+
+// Le reste du code de votre page admin ici
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +20,7 @@
 <body>
     
 <header>
-    <form action="" method="post"><button class="logoff_button" type="submit">Logout</button></form>
+    <form action="db_connect/logout.php" method="post"><button class="logoff_button" type="submit">Logout</button></form>
     <a href="index.php">Home Page</a>
 </header>
 

@@ -1,3 +1,14 @@
+<?php
+session_start(); // Démarrer la session
+
+if(isset($_SESSION['user_id'])) {
+    // Si l'utilisateur est déjà connecté, redirigez-le vers la page admin
+    header("Location: admin-page.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +18,13 @@
 </head>
 <body>
     
-<form action="" method="post">
+<form action="db_connect/user_login.php" method="post">
 
     <h1><strong>Login</strong><br>Harmony Massage Therapy</h1>
 
     <input type="text" name="name" id="name" placeholder="Login" required>
 
-    <input type="password"  placeholder="password" required>
+    <input type="password" name="password" id="password" placeholder="password" required>
 
     <button type="submit">Submit</button>
 
