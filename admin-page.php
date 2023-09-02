@@ -12,6 +12,14 @@
     <a href="index.php">Home Page</a>
 </header>
 
+<div class="pswd_change">
+    <h3>Change password</h3>
+    <form action="db_connect/pswd_admin_change.php" method="post">
+        <input type="password" name="pwd" id="password" placeholder="New password" required>
+        <button type="submit">Change</button>
+    </form>
+</div>
+
 <div class="advices_section">
 
     <h3>Pareri si comentarii</h3>
