@@ -19,7 +19,11 @@
             <img src="./assets/menu.svg" alt="Menu's button icone" onclick="openMenuFunction()">
         </div>
         
-        <div class="desktop_menu"></div>
+        <div class="desktop_menu">
+            <a href="" class="desktop_menu_link main_font">Contact</a>
+            <a href="" class="desktop_menu_link main_font">Pareri</a>
+            <a href="" class="desktop_menu_link main_font">Termeni si conditii de utilizare</a>
+        </div>
     </header>
 
     <div class="menu_container" id="menu_container">
@@ -33,6 +37,9 @@
     <div class="banner">
         <img src="./assets/alan-caishan-cU53ZFBr3lk-unsplash.jpg" alt="Harmony Massage Therapy's Banner" class="banner_background">
         <img src="./assets/gants.jpg" alt="Banner's second image" class="banner_img">
+
+        <div class="banner_filter"></div>
+        <h1 class="banner_filter_title">Terapia Fohow<br>Harmony Massage Therapy</h1>
     </div>
 
     <main>
@@ -114,7 +121,7 @@
             </div>
         </div>
         
-        <div class="advices_sections">
+        <div class="advice_section">
             <h3 class="main_font advice_section_title">Opinii despre Harmony Massage Therapy</h3>
             <ul class="gallery advices_section">
 
@@ -196,6 +203,17 @@ completand formular de mai in jos</h3>
     </main>
 
     <footer>
+
+        <div class="footer_sections">
+            <p class="main_font"><strong>Adresa</strong> : Aleea Minerilor 29, Baia Sprie 435100</p>
+            <p class="main_font"><strong>Telefon : </strong>+40 771 766 535</p>
+            <p class="main_font"><strong>Email : </strong>terapiefohow@gmail.com</p>
+        </div>
+
+        <div class="footer_sections">
+            <p class="main_font"><a href="">Termeni si conditii de utilizare</a></p>
+            <p class="main_font">Credit website : Harmony Massage Therapy ®</p>
+        </div>
 
     </footer>
 <script src="main.js"></script>
