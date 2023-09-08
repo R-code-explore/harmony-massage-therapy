@@ -169,27 +169,23 @@ completand formular de mai in jos</h3>
                 <label for="option">Alegeti o nota : </label>
                 <select id="option" name="option">
                     <option value="option1" class="option-container">
-                        <img src="./assets/star_1.jpg" alt="Image 1"         class="option-image">
-                        Nota 1/5
+                        <p>Nota 1/5</p>
                     </option>
                     <option value="option2" class="option-container">
-                        <img src="./assets/star_2.jpg" alt="Image 2"         class="option-image">
-                        Nota 2/5
+                        <p>Nota 2/5</p>
                     </option>
                     <option value="option3" class="option-container">
-                        <img src="./assets/star_3.jpg" alt="Image 3"         class="option-image">
-                        Nota 3/5
+                        <p>Nota 3/5</p>
                     </option>
                     <option value="option4" class="option-container">
-                        <img src="./assets/star_4.jpg" alt="Image 4"         class="option-image">
-                        Nota 4/5
+                        <p>Nota 4/5</p>
                     </option>
                     <option value="option5" class="option-container">
-                        <img src="./assets/star_5.jpg" alt="Image 5"         class="option-image">
-                        Nota 5/5
+                        <p>Nota 5/5</p>
                     </option>
                     <!-- Ajoutez autant d'options que nécessaire -->
                 </select>
+                <img id="image_preview" src="assets/stars/1.png" alt="Image Preview">
                 <br><br>
                 <div class="termens_checkbox">
                     <input type="checkbox">
@@ -199,6 +195,43 @@ completand formular de mai in jos</h3>
                 <button class="submit_form_button main_font" type="submit">Trimite</button>
             </form>
          </div>
+
+         <script>
+    // Récupérez la référence vers le sélecteur
+    var selectElement = document.getElementById("option");
+
+    // Récupérez la référence vers l'image que vous souhaitez mettre à jour
+    var imagePreview = document.getElementById("image_preview");
+
+    // Ajoutez un écouteur d'événements "change" au sélecteur
+    selectElement.addEventListener("change", function() {
+        // Obtenez la valeur sélectionnée dans le sélecteur
+        var selectedOption = selectElement.value;
+
+        // Mettez à jour l'image en fonction de l'option sélectionnée
+        switch (selectedOption) {
+            case "option1":
+                imagePreview.src = "assets/stars/1.png";
+                break;
+            case "option2":
+                imagePreview.src = "assets/stars/2.png";
+                break;
+            case "option3":
+                imagePreview.src = "assets/stars/3.png";
+                break;
+            case "option4":
+                imagePreview.src = "assets/stars/4.png";
+                break;
+            case "option5":
+                imagePreview.src = "assets/stars/5.png";
+                break;
+            // Autres options peuvent être ajoutés au cas ou
+            default:
+                imagePreview.src = "default-image.jpg"; // Image par défaut
+        }
+    });
+</script>
+
     
     </main>
 

@@ -464,6 +464,10 @@ form textarea{
     height: 100px;
     resize:none;
 }
+#image_preview{display: block; height: 40px;}
+@media (min-width:1040px){
+    #image_preview{height: 60px;}
+}
 
 .termens_checkbox input{
     width: 20px;
@@ -544,4 +548,14 @@ footer{
 .footer_sections p{
     color: white;
     font-size: 18px;
+}
+
+@media (max-width:750px) {
+    footer{
+        margin-bottom:0px;
+    }
+
+    .footer_sections p{
+        font-size: 12px;
+    }
 }

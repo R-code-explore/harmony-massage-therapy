@@ -2,12 +2,11 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+    // Si l'utilisateur n'est pas connecté, redirection vers la page de connexion
     header("Location: admin.php");
     exit;
 }
 
-// Le reste du code de votre page admin ici
 ?>
 
 <!DOCTYPE html>
