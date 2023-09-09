@@ -126,33 +126,9 @@
             <ul class="gallery advices_section">
 
                 <!--Section à générer en PHP-->
-                <li class="advices_sections">
-                    <div class="user_info">
-                        <img src="./assets/user_img_example.jpg" alt="src">
-                        <p>Oana Test</p>
-                    </div>
-                    <p>Incepant cu primele sedinte,
-                    am inceput deja sa simt o reala
-                    diferenta !</p>
-                    <div class="stars">
-                        <!--Script de vote par étoile ( avec séléction JS dans un   formulaire par exemple ) // à développer-->
-                        <img src="./assets/etoiles_exemple.png" alt="indicatie de   o nota atrbuita de vre un utilizator">
-                    </div>
-                </li>
+                
         
-                <li class="advices_sections">
-                    <div class="user_info">
-                        <img src="./assets/user_img_example.jpg" alt="src">
-                        <p>Oana Test</p>
-                    </div>
-                    <p>Incepant cu primele sedinte,
-                    am inceput deja sa simt o reala
-                    diferenta !</p>
-                    <div class="stars">
-                        <!--Script de vote par étoile ( avec séléction JS dans un   formulaire par exemple ) // à développer-->
-                        <img src="./assets/etoiles_exemple.png" alt="indicatie de   o nota atrbuita de vre un utilizator">
-                    </div>
-                </li>
+                
         
             </ul>
          </div>
@@ -160,7 +136,7 @@
          <div class="advice_form">
             <h3 class="main_font advice_form_title">Lasati si dumneavoastra un comentariu
 completand formular de mai in jos</h3>
-            <form action="" method="POST" class="form">
+            <form action="db_connect/vote_register.php" method="POST" class="form" enctype="multipart/form-data">
                 
                 <input type="text" class="advice_form_input main_font" id="advice_form_input_01" name="name" placeholder="Prenume" required>
             
@@ -183,10 +159,12 @@ completand formular de mai in jos</h3>
                     <option value="option5" class="option-container">
                         <p>Nota 5/5</p>
                     </option>
-                    <!-- Ajoutez autant d'options que nécessaire -->
+                    <!-- Ajouter autant d'options que nécessaire -->
                 </select>
                 <img id="image_preview" src="assets/stars/1.png" alt="Image Preview">
                 <br><br>
+                <label for="imageToUpload">O poza cu dumneavoastra ?<br>Poza nu este obligatorie</label>
+                <input type="file" name="imageToUpload" id="imageToUpload">
                 <div class="termens_checkbox">
                     <input type="checkbox">
                     <p class=main_font>Am acceptat <a href="">terminii si conditiile</a> site-ului inainte de a confirma formularul</p>
