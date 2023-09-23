@@ -35,32 +35,47 @@ if (!isset($_SESSION['user_id'])) {
 
     <h3>Pareri si comentarii</h3>
     <div>
-        <div class="advices" id="advices">
-            <p class="prenum">Prenume</p>
-            <p class="mesaj">Mesaj sau comentariu</p>
-            <p class="nota">Nota : 4 / 5</p>
-            <form action="" method="post">
-                <button class="advices_button accept" type="submit">Accept</button>
-            </form>
-    
-            <form action="" method="post">
-                <button class="advices_button refuz" type="submit">Refuz</button>
-            </form>
-        </div>
 
+    <?php
+
+require_once 'db_connect/connect.php';
+
+    $datasRequires = "SELECT * FROM `waiting_vote`";
+
+    $queryDatas = $db->prepare($datasRequires);
+    $queryDatas->execute();
+    $datas = $queryDatas->fetchAll();
+
+?>
+        <?php foreach($datas as $data): ?>
         <div class="advices" id="advices">
-            <p class="prenum">Prenume</p>
-            <p class="mesaj">Mesaj sau comentariu</p>
-            <p class="nota">Nota : 4 / 5</p>
-            <form action="" method="post">
+            <p class="id"><?=$data["id"]?></p>
+            <img src="db_connect/users_images/<?=$data["image"]?>" alt="Nici o imagine" class="user_image">
+            <p class="name"><?=$data["name"]?></p>
+            <p class="coment"><?=$data["coment"]?></p>
+            <p class="vote">Nota : <?=$data["vote"]?></p>
+            
+            <form action="db_connect/db_actions/accept_vote.php" method="post">
+                <input type="text" name="id" id="id" value="<?=$data["id"]?>">
+                <input type="text" name="image" id="image" value="<?=$data["image"]?>">
+                <input type="text" name="name" id="name" value="<?=$data["name"]?>">
+                <input type="text" name="coment" id="coment" value="<?=$data["coment"]?>">
+                <input type="text" name="vote" id="vote" value="<?=$data["vote"]?>">
                 <button class="advices_button accept" type="submit">Accept</button>
             </form>
     
-            <form action="" method="post">
+            <form action="db_connect/db_actions/del_vote.php" method="post">
+            <input type="text" name="id" id="id" value="<?=$data["id"]?>">
+                <input type="text" name="image" id="image" value="<?=$data["image"]?>">
+                <input type="text" name="name" id="name" value="<?=$data["name"]?>">
+                <input type="text" name="coment" id="coment" value="<?=$data["coment"]?>">
+                <input type="text" name="vote" id="vote" value="<?=$data["vote"]?>">
                 <button class="advices_button clas
                 refuz" type="submit">Refuz</button>
             </form>
         </div>
+        <?php endforeach; ?>
+
     </div>
 
 </div>
@@ -74,6 +89,18 @@ if (!isset($_SESSION['user_id'])) {
         margin-top: 60px;
     }
 
+    .user_image{
+        display: block;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .advices form input{
+        display: none;
+    }
+
     .advices_section{
         display: block;
         width: 80%;
@@ -83,11 +110,16 @@ if (!isset($_SESSION['user_id'])) {
         border: 1px solid blue;
         border-radius: 10px;
     }
+    
+    .advices{max-width:400px; padding: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    }
 
     .advices_section > h3{text-align: center; font-size: 18px; margin-bottom:40px;}
 
     .advices_section > div{
-        display: flex;
+        display:flex;
         width: 100%;
         justify-content: space-around;
     }

@@ -126,9 +126,54 @@
             <ul class="gallery advices_section">
 
                 <!--Section à générer en PHP-->
-                
-        
-                
+
+                <?php
+
+                    require_once 'db_connect/connect.php';
+
+                    $datasRequires = "SELECT * FROM `validate_vote`";
+
+                    $queryDatas = $db->prepare($datasRequires);
+                    $queryDatas->execute();
+                    $datas = $queryDatas->fetchAll();
+
+                ?>
+                <?php foreach($datas as $data): ?>
+
+                <li>
+                    <div class="user_info">
+                        <img src="db_connect/users_images/<?=$data["image"]?>" alt="Fara imagine">
+                        <p class="main_font"><?=$data["name"]?></p>
+                    </div>
+                    <p class="main_font"><?=$data["coment"]?></p>
+                    <p class="main_font vote_txt" id="vote_txt"><?=$data["vote"]?></p>
+                    <div class="stars">
+                        <img src="" alt="vot" id="vote_img" class="vote_img">
+                    </div>
+                </li>
+                <?php endforeach; ?>
+
+                <script>
+                    var vote_txt = document.querySelectorAll('.vote_txt');
+
+                    var vote_img = document.querySelectorAll('.vote_img');
+
+                    for (var i = 0; i < vote_txt.length; i++) {
+                    if (vote_txt[i].innerHTML == "option1") {
+                        vote_img[i].src = "assets/stars/1.png";
+                    } else if (vote_txt[i].innerHTML == "option2") {
+                        vote_img[i].src = "assets/stars/2.png";
+                    } else if (vote_txt[i].innerHTML == "option3") {
+                        vote_img[i].src = "assets/stars/3.png";
+                    } else if (vote_txt[i].innerHTML == "option4") {
+                        vote_img[i].src = "assets/stars/4.png";
+                    } else if (vote_txt[i].innerHTML == "option5") {
+                        vote_img[i].src = "assets/stars/5.png";
+                    }
+                }
+                </script>
+
+                <style>#vote_txt{display: none;}</style>
         
             </ul>
          </div>
